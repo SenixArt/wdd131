@@ -1,0 +1,51 @@
++<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 – Dynamic Web Fundamentals – Daniel Cosme</title>
+    <meta name="description" content="WDD 131 – Dynamic Web Fundamentals course landing page for Daniel Cosme featuring web development projects, resources, and dynamic JavaScript dates.">
+    <meta name="author" content="Daniel Cosme">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS y JS -->
+    <link rel="stylesheet" href="styles/base.css">
+    <script src="scripts/getdates.js" defer></script>
+</head>
+<body>
+    <header>
+        <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
+        <nav>
+            <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+            <a href="https://byupw.instructure.com/" target="_blank">Canvas</a>
+            <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7" target="_blank">Scripture</a>
+            <a href="#">Final Project</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Daniel Cosme</h1>
+        
+        <section class="card">
+            <h2>Web Development</h2>
+            <img src="images/web-dev.webp" alt="Web Development Workspace" width="400" height="250" loading="lazy">
+            <p>Welcome to my course landing page! I am excited to explore dynamic web development, layout design with CSS Grid and Flexbox, and interactive programming with JavaScript.</p>
+        </section>
+
+        <section class="card">
+            <h2>Zulia, Venezuela</h2>
+            <img src="images/zulia.webp" alt="Zulia Venezuela Landscape" width="400" height="250" loading="lazy">
+            <p>I live in San Francisco, Zulia, Venezuela. Zulia is well known for its rich culture, vibrant history, and unique landmarks like the General Rafael Urdaneta Bridge over Lake Maracaibo.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Daniel Cosme | Venezuela</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
