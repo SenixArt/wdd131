@@ -1,0 +1,113 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Header & Flex Navigation */
+header {
+    background-color: #002244;
+    color: white;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+#menu-button {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Menú oculto por defecto en móvil */
+.menu-links {
+    list-style: none;
+    display: none;
+    flex-direction: column;
+}
+
+/* Clase dinámica que agrega JS */
+.menu-links.open {
+    display: flex;
+}
+
+.menu-links li a {
+    display: block;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background-color: #003366;
+    border-top: 1px solid #004488;
+    transition: background-color 0.3s;
+}
+
+.menu-links li a:hover, .menu-links li a.active {
+    background-color: #0055aa;
+}
+
+/* Main Content & CSS Grid */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #002244;
+}
+
+/* Grid: 1 columna en móvil */
+.res-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+figure {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+figcaption {
+    text-align: center;
+    padding: 1rem;
+    font-weight: 700;
+    background-color: #eee;
+}
+
+/* Footer */
+footer {
+    background-color: #002244;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    line-height: 1.5;
+}
