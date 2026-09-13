@@ -1,0 +1,119 @@
+/* Variables Globales usando los colores de Venezuela */
+:root {
+    --primary-color: #0038A8; /* Azul */
+    --secondary-color: #CE1126; /* Rojo */
+    --accent-color: #FCE300; /* Amarillo */
+    --bg-color: #f0f0f0;
+    --text-color: #333333;
+    --white: #ffffff;
+    --font-main: 'Roboto', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 1.5rem;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1.5rem;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.info-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.card {
+    background-color: var(--white);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-top: 5px solid var(--secondary-color);
+}
+
+.card h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.card p {
+    margin-bottom: 0.5rem;
+}
+
+.weather-icon-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.weather-icon-svg {
+    fill: #ffa500;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+/* -------------------------------------------
+   MEDIA QUERY: WIDER VIEW (Para computadoras)
+   ------------------------------------------- */
+@media (min-width: 768px) {
+    .info-section {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .card {
+        flex: 1; /* Hace que ambas tarjetas ocupen el mismo ancho */
+    }
+
+    /* Ocultamos el SVG en pantalla grande (Requisito 5) */
+    .weather-icon-svg {
+        display: none; 
+    }
+
+    /* Agregamos el emoticono con el seudoelemento (Requisito 6) */
+    h2.weather-title::after {
+        content: " ⛅"; 
+    }
+}
