@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venezuela - Country Page</title>
+    <meta name="description" content="WDD 131 - Country Page assignment focusing on Venezuela, featuring responsive design and dynamic JavaScript.">
+    <meta name="author" content="Daniel Cosme">
+    <!-- Vincula tus estilos y scripts -->
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+    <!-- Fuentes de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Venezuela</h1>
+    </header>
+
+    <main>
+        <div class="hero">
+            <!-- Etiqueta Picture con las imágenes WebP (Hero Image Swap) -->
+            <picture>
+                <source srcset="images/venezuela-hero-large.webp" media="(min-width: 768px)">
+                <img src="images/venezuela-hero-small.webp" alt="Beautiful landscape of Venezuela" width="500" height="250" loading="lazy">
+            </picture>
+        </div>
+        
+        <div class="info-section">
+            <!-- Primera columna: Datos -->
+            <section class="card data-card">
+                <h2>Data</h2>
+                <p><strong>Area:</strong> 916,445 sq km</p>
+                <p><strong>Population:</strong> 28,000,000</p>
+                <p><strong>Capital:</strong> Caracas</p>
+                <p><strong>Languages:</strong> Spanish</p>
+                <p><strong>Currency:</strong> Bolívar (VES)</p>
+                <p><strong>Time Zone:</strong> UTC-4</p>
+                <p><strong>Calling Code:</strong> +58</p>
+                <p><strong>Internet TLD:</strong> .ve</p>
+            </section>
+
+            <!-- Segunda columna: Clima -->
+            <section class="card weather-card">
+                <h2 class="weather-title">Weather</h2>
+                
+                <div class="weather-icon-wrapper">
+                    <!-- Icono SVG que solo se verá en celulares -->
+                    <svg class="weather-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48" fill="#FCE300">
+                        <path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.8 5.2a.75.75 0 011.06 0l1.59 1.59a.75.75 0 11-1.06 1.06l-1.59-1.59a.75.75 0 010-1.06zM21 11.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0v-2.25a.75.75 0 01.75-.75zM19.86 18.8a.75.75 0 010 1.06l-1.59 1.59a.75.75 0 11-1.06-1.06l1.59-1.59a.75.75 0 011.06 0zM12 18.75a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25a.75.75 0 01.75-.75zM5.2 18.8a.75.75 0 010 1.06l-1.59 1.59a.75.75 0 11-1.06-1.06l1.59-1.59a.75.75 0 011.06 0zM2.25 12a.75.75 0 01.75-.75h2.25a.75.75 0 010 1.5H3a.75.75 0 01-.75-.75zM4.14 5.2a.75.75 0 011.06 0l1.59 1.59a.75.75 0 11-1.06 1.06L4.14 6.26a.75.75 0 010-1.06z"></path>
+                    </svg>
+                </div>
+
+                <!-- Usamos 10°C para que la matemática del Wind Chill se ejecute correctamente según la rúbrica -->
+                <p><strong>Temperature:</strong> <span id="temperature">10</span> °C</p>
+                <p><strong>Conditions:</strong> Sunny</p>
+                <p><strong>Wind:</strong> <span id="windspeed">15</span> km/h</p>
+                <p><strong>Wind Chill:</strong> <span id="windchill"></span></p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> 🇻🇪 Daniel Cosme 🇻🇪 Venezuela</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
