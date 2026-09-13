@@ -1,119 +1,83 @@
-/* Variables Globales usando los colores de Venezuela */
 :root {
-    --primary-color: #0038A8; /* Azul */
-    --secondary-color: #CE1126; /* Rojo */
-    --accent-color: #FCE300; /* Amarillo */
-    --bg-color: #f0f0f0;
-    --text-color: #333333;
-    --white: #ffffff;
-    --font-main: 'Roboto', sans-serif;
+    --primary: #1b4332;
+    --accent: #52b788;
+    --light: #f8f9fa;
+    --dark: #212529;
 }
 
-* {
-    box-sizing: border-box;
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--light);
+    color: var(--dark);
     margin: 0;
     padding: 0;
 }
 
-body {
-    font-family: var(--font-main);
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    line-height: 1.6;
-}
-
 header {
-    background-color: var(--primary-color);
-    color: var(--white);
+    background-color: var(--primary);
+    color: white;
     text-align: center;
-    padding: 1.5rem;
+    padding: 1rem;
 }
 
 main {
-    max-width: 1000px;
+    max-width: 900px;
     margin: 0 auto;
-    padding: 1.5rem;
-}
-
-.hero {
-    text-align: center;
-    margin-bottom: 2rem;
+    padding: 1rem;
 }
 
 .hero img {
     width: 100%;
     height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: block;
+    border-radius: 4px;
 }
 
-.info-section {
+.grid {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1rem;
+    margin-top: 1rem;
 }
 
 .card {
-    background-color: var(--white);
+    background: white;
     padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    border-top: 5px solid var(--secondary-color);
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .card h2 {
-    color: var(--primary-color);
-    border-bottom: 2px solid var(--accent-color);
-    padding-bottom: 0.5rem;
-    margin-bottom: 1rem;
+    color: var(--primary);
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 0.3rem;
+    margin-top: 0;
 }
 
-.card p {
+.weather-icon {
+    text-align: center;
     margin-bottom: 0.5rem;
 }
 
-.weather-icon-wrapper {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 1rem;
-}
-
-.weather-icon-svg {
-    fill: #ffa500;
-}
-
 footer {
-    background-color: var(--primary-color);
-    color: var(--white);
+    background-color: var(--primary);
+    color: white;
     text-align: center;
-    padding: 1.5rem;
+    padding: 1rem;
     margin-top: 2rem;
 }
 
-footer p {
-    margin: 0.5rem 0;
-}
-
-/* -------------------------------------------
-   MEDIA QUERY: WIDER VIEW (Para computadoras)
-   ------------------------------------------- */
 @media (min-width: 768px) {
-    .info-section {
+    .grid {
         flex-direction: row;
-        justify-content: space-between;
     }
-
     .card {
-        flex: 1; /* Hace que ambas tarjetas ocupen el mismo ancho */
+        flex: 1;
     }
-
-    /* Ocultamos el SVG en pantalla grande (Requisito 5) */
-    .weather-icon-svg {
-        display: none; 
+    .weather-icon {
+        display: none;
     }
-
-    /* Agregamos el emoticono con el seudoelemento (Requisito 6) */
-    h2.weather-title::after {
-        content: " ⛅"; 
+    .card:nth-child(2) h2::after {
+        content: " ⛅";
     }
 }
