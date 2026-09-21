@@ -78,7 +78,7 @@ const temples = [
     dedicated: "2000, December, 10",
     area: 15332,
     imageUrl:
-      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/caracas-venezuela/400x250/caracas-venezuela-temple-lds-161742-wallpaper.jpg"
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Caracas_Venezuela_Temple.jpg/400px-Caracas_Venezuela_Temple.jpg"
   }
 ];
 
